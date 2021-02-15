@@ -94,4 +94,33 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+
+
+    //<<<<<<<<<<<<<<<<<<<<<<Order Total>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void when_items_selected_order_total_should_not_be_zero(){
+
+
+        List<String> selectedItems = new ArrayList<String>();
+        selectedItems.add("Vegetable lasagne");
+        selectedItems.add("Sweet corn soup");
+        int orderTotal = restaurant.getOrderTotal(selectedItems);
+        System.out.println(orderTotal);
+        assertNotEquals(0,orderTotal);
+    }
+
+    @Test
+    public void when_items_selected_order_total_should_be_zero(){
+
+        List<String> selectedItems = new ArrayList<String>();
+        int orderTotal = restaurant.getOrderTotal(selectedItems);
+        System.out.println(orderTotal);
+        assertEquals(0,orderTotal);
+
+
+    }
+
+
+
 }
