@@ -106,7 +106,7 @@ class RestaurantTest {
         selectedItems.add("Vegetable lasagne");
         selectedItems.add("Sweet corn soup");
         int orderTotal = restaurant.getOrderTotal(selectedItems);
-        System.out.println(orderTotal);
+      //  System.out.println(orderTotal);
         assertNotEquals(0,orderTotal);
     }
 
@@ -115,7 +115,7 @@ class RestaurantTest {
 
         List<String> selectedItems = new ArrayList<String>();
         int orderTotal = restaurant.getOrderTotal(selectedItems);
-        System.out.println(orderTotal);
+       // System.out.println(orderTotal);
         assertEquals(0,orderTotal);
 
 
